@@ -1,0 +1,6 @@
+Title,URL,Section,Weight,Excerpt
+Breaking News: Example Headline,https://news.example.com/article-1,top,100,This is the top headline.
+Left Column Story,https://news.example.com/article-2,left,50,A smaller story in the left column.
+Middle Column Update,https://news.example.com/article-3,middle,40,Something going on in the middle.
+Right Column Feature,https://news.example.com/article-4,right,30,A right-hand feature story.
+Ticker Item,https://news.example.com/article-5,ticker,10,Quick blurb for the ticker.
