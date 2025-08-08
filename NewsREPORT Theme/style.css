@@ -1,0 +1,56 @@
+/*
+Theme Name: NewsREPORT
+Theme URI: https://github.com/SudoSeagull/NewsREPORT
+Author: SudoSeagull
+Author URI: https://github.com/SudoSeagull
+Description: Minimal ClassicPress/WordPress 4.9+ theme for a Drudge-style front page with Bootstrap 5, dark mode, and ad widget areas.
+Version: 1.0.1
+License: MIT
+Text Domain: NewsREPORT
+*/
+
+/* CSS Variables for light */
+:root {
+  --bg: #ffffff;
+  --fg: #111111;
+  --link: #0033cc;
+  --muted: #666666;
+  --border: #e5e7eb;
+}
+
+/* If user toggles dark */
+html[data-theme="dark"] {
+  --bg: #0e0e12;
+  --fg: #eaeaea;
+  --link: #7aa2ff;
+  --muted: #9aa0a6;
+  --border: #2a2a2f;
+}
+
+/* Respect system dark when no explicit toggle chosen */
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme]) {
+    --bg: #0e0e12;
+    --fg: #eaeaea;
+    --link: #7aa2ff;
+    --muted: #9aa0a6;
+    --border: #2a2a2f;
+  }
+}
+
+body { background: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif; }
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+small, .text-muted { color: var(--muted); }
+hr { border-color: var(--border); }
+
+/* Layout tweaks */
+.headline-top a { font-size: 1.8rem; font-weight: 700; }
+.section-title { font-weight: 700; letter-spacing: .02em; border-bottom: 1px solid var(--border); padding-bottom: .25rem; margin-bottom: .75rem; }
+.link-item { margin-bottom: .5rem; }
+.link-item a { font-weight: 600; }
+.ticker { font-size: 0.95rem; line-height: 1.4; }
+.ad-slot { min-height: 90px; display:flex; align-items:center; justify-content:center; background: transparent; border: 1px dashed var(--border); margin-bottom: 1rem; }
+.navbar-brand { font-weight: 800; letter-spacing: .02em; }
+.theme-toggle { border: 1px solid var(--border); border-radius: .5rem; padding: .25rem .5rem; font-size:.9rem; }
+.footer { font-size: .9rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 1rem; margin-top: 2rem;}
